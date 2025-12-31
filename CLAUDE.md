@@ -147,6 +147,7 @@ When starting work on a new track, you **MUST** autonomously set up your environ
 3. **ALWAYS update `progress.md` when starting/completing tasks**
 4. **If you need design decisions or research**: Create `tasks/MANUS-REQUEST-{timestamp}.md` and notify user
 5. **If you encounter conflicts**: Stop and notify user; Manus will resolve them
+6. **During E2E testing (Manus)**: NEVER modify code directly; create `tasks/BUG-FIX-{timestamp}.md` and delegate to Claude Code
 
 ---
 
@@ -165,4 +166,5 @@ When starting work on a new track, you **MUST** autonomously set up your environ
 
 - `docs/architecture.md` - System architecture
 - `docs/requirements.md` - Requirements specification
-- `docs/workflow/parallel-development-guide.md` - Parallel development guide
+- `docs/parallel-development-guide.md` - Parallel development guide
+- `docs/e2e-bugfix-flow.md` - E2E testing bug fix workflow

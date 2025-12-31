@@ -59,6 +59,19 @@ At each checkpoint, run through this checklist:
 □ Have I notified the user?
 ```
 
+### Checkpoint: E2E Testing Phase (Manus Only)
+
+```
+□ Am I about to modify code directly? → STOP! Create BUG-FIX task instead
+□ Have I created a BUG-FIX-{timestamp}.md file for each bug found?
+□ Have I delegated the fix to the appropriate Claude Code instance?
+□ Am I waiting for Claude Code's PR before proceeding?
+```
+
+> **Critical Rule**: During E2E testing, Manus must NEVER directly modify code.
+> All bug fixes must be delegated to Claude Code via BUG-FIX task files.
+> See: `docs/e2e-bugfix-flow.md`
+
 ## Skill Activation Keywords
 
 When you see these keywords in your context, **immediately activate** the corresponding skill:
@@ -69,6 +82,7 @@ When you see these keywords in your context, **immediately activate** the corres
 | "worktree", "parallel", "別トラック" | `autonomous-worktree-manager` |
 | "progress", "status", "進捗" | `progress-tracker` |
 | "design decision", "architecture", "Manusに確認" | `manus-delegator` |
+| "E2E", "bug found", "バグ発見", "integration test" | `e2e-bugfix-flow` |
 
 ## Important Notes
 
